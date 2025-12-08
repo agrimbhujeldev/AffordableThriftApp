@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 // import 'package:flutter_native_splash/flutter_native_splash.dart';
+
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:logging/logging.dart';
+
 
 const kApplicationCode = 'affordablethrift';
 
@@ -7,55 +12,36 @@ void main() {
 
   final widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
 
-  // FlutterNative
+  // FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
   
-  // runApp(ProviderScope(child: const App()));
+  runApp(ProviderScope(child: const App()));
 
-  runApp(App());
+  // runApp(App());
+  // runApp(MyHomePage());
+
   // runApp(const App());
 }
 
-
-// class App extends StatefulWidget {
-//   const App({super.key});
-
-//   @override
-//   State<App> createState() => _AppState();
-// }
-
-// class _AppState extends State<App> {
-//   @override
-//   Widget build(BuildContext context) {
-//     return const Placeholder();
-//   }
-// }
-
-// ---------------------------------------
-
-// class App extends ConsumerStatefulWidget {
-//   const App({super.key});
-
-//   @override
-//   ConsumerState<ConsumerStatefulWidget> createState() => _AppState();
-// }
-
-// class _AppState extends ConsumerState<App> with WidgetsBindingObserver {
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Container();
-//   }
-// }
 // ---------------------------------------
 
 class App extends ConsumerStatefulWidget {
   const App({super.key});
 
   @override
-  ConsumerState<ConsumerStatefulWidget> createState() => _AppState();
+  ConsumerState<App> createState() => AppState();
 }
 
-class _AppState extends ConsumerState<App> with WidgetsBindingObserver {
+class AppState extends ConsumerState<App> with WidgetsBindingObserver {
+  static final GlobalKey<NavigatorState> rootNavigatorKey = GlobalKey<NavigatorState>();
+  
+
+  final _logger = Logger('AppWidget');
+  
+  @override
+  void initState(){
+    super.initState();
+    WidgetsBinding.instance.addObserver(this);
+  }
 
   // This widget is the root of your application.
   @override
@@ -86,5 +72,6 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(appBar: AppBar(), body: const Text('data'));
   }
 }
+
 
 // D:\src_dev\flutter\AFFORDABLE-THRIFT-FLUTTER-APP-2025-\CODE-\SRC-\opensource\AffordableThriftApp\flutterapp\lib\main.dart
