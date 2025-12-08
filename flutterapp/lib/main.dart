@@ -5,15 +5,13 @@ import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:logging/logging.dart';
 
-
 const kApplicationCode = 'affordablethrift';
 
 void main() {
-
   final widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
 
   // FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
-  
+
   runApp(ProviderScope(child: const App()));
 
   // runApp(App());
@@ -32,13 +30,13 @@ class App extends ConsumerStatefulWidget {
 }
 
 class AppState extends ConsumerState<App> with WidgetsBindingObserver {
-  static final GlobalKey<NavigatorState> rootNavigatorKey = GlobalKey<NavigatorState>();
-  
+  static final GlobalKey<NavigatorState> rootNavigatorKey =
+      GlobalKey<NavigatorState>();
 
   final _logger = Logger('AppWidget');
-  
+
   @override
-  void initState(){
+  void initState() {
     super.initState();
     WidgetsBinding.instance.addObserver(this);
   }
@@ -56,6 +54,44 @@ class AppState extends ConsumerState<App> with WidgetsBindingObserver {
   }
 }
 
+// -----------------------------------------------------
+
+class Splash extends ConsumerStatefulWidget {
+  const Splash({super.key});
+
+  static const routerPage = '/';
+
+  @override
+  // ConsumerState<ConsumerStatefulWidget> createState() => _SplashState();
+  ConsumerState<Splash> createState() => _SplashState();
+}
+
+class _SplashState extends ConsumerState<Splash> {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Column(
+        children: [
+          Text('splash archethic 🎉'),
+          Text('splash archethic 🎉'),
+          Text('splash archethic 🎉'),
+          Text('splash archethic 🎉'),
+          Text('splash archethic 🎉'),
+          Text('splash archethic 🎉'),
+          Text('splash archethic 🎉'),
+          Text('splash archethic 🎉'),
+          Text('splash archethic 🎉'),
+          Text('splash archethic 🎉'),
+          Text('splash archethic 🎉'),
+          Text('splash archethic 🎉'),
+          Text('splash archethic 🎉'),
+          Text('splash archethic 🎉'),
+          Text('splash archethic 🎉'),
+        ],
+      ),
+    );
+  }
+}
 
 // -----------------------------------------------------
 
@@ -72,6 +108,5 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(appBar: AppBar(), body: const Text('data'));
   }
 }
-
 
 // D:\src_dev\flutter\AFFORDABLE-THRIFT-FLUTTER-APP-2025-\CODE-\SRC-\opensource\AffordableThriftApp\flutterapp\lib\main.dart
