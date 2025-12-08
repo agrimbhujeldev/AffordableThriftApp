@@ -103,3 +103,56 @@ Everything up-to-date
 
 
 ---
+
+
+saurav@LAPTOP-JS10JJ6V MINGW64 /d/src_dev/flutter/AFFORDABLE-THRIFT-FLUTTER-APP-2025-/CODE-/SRC-/opensource/AffordableThriftApp (main)
+$ git add .
+
+saurav@LAPTOP-JS10JJ6V MINGW64 /d/src_dev/flutter/AFFORDABLE-THRIFT-FLUTTER-APP-2025-/CODE-/SRC-/opensource/AffordableThriftApp (main)
+$ git commit -am "git clone tips notes"
+[main 6d40076] git clone tips notes
+ 2 files changed, 150 insertions(+)
+ create mode 100644 flutterapp/.gitignore
+ create mode 100644 flutterapp/znotes/git-notes-.md
+
+saurav@LAPTOP-JS10JJ6V MINGW64 /d/src_dev/flutter/AFFORDABLE-THRIFT-FLUTTER-APP-2025-/CODE-/SRC-/opensource/AffordableThriftApp (main)
+$ git push -u origin main
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (6/6), 1.96 KiB | 501.00 KiB/s, done.
+Total 6 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/agrimbhujeldev/AffordableThriftApp.git
+   62772a1..6d40076  main -> main
+branch 'main' set up to track 'origin/main'.
+
+saurav@LAPTOP-JS10JJ6V MINGW64 /d/src_dev/flutter/AFFORDABLE-THRIFT-FLUTTER-APP-2025-/CODE-/SRC-/opensource/AffordableThriftApp (main)
+$ git log
+commit 6d40076daf10531b104dfb62c0e5e0fce0a888f0 (HEAD -> main, origin/main, origin/HEAD)
+Author: pankaj-basnet <165250380+pankaj-basnet@users.noreply.github.com>
+Date:   Thu Nov 20 17:30:34 2025 +0545
+
+    git clone tips notes
+
+commit 62772a159effb3f95af4a9c7c44773e264586b83
+Author: agrimbhujeldev <agrimbhujel2023@gmail.com>
+Date:   Thu Nov 20 17:02:47 2025 +0545
+
+    Add files via upload
+
+commit 0ed6b3fd1fde17fb5210f89cdd61a28d6ed44cdc
+Author: agrimbhujeldev <agrimbhujel2023@gmail.com>
+Date:   Thu Nov 20 17:01:15 2025 +0545
+
+    Add files via upload
+
+commit c4a4f2f68ee612b73f275ebac7bd59c4c0df3bea
+
+saurav@LAPTOP-JS10JJ6V MINGW64 /d/src_dev/flutter/AFFORDABLE-THRIFT-FLUTTER-APP-2025-/CODE-/SRC-/opensource/AffordableThriftApp (main)
+$ date
+Thu, Nov 20, 2025  5:31:05 PM
+
+
+---
